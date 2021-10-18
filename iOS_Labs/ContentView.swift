@@ -13,17 +13,20 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            TextField("Enter your name", text: $fieldText)
+            TextField("Enter your name", text: $fieldText, onCommit: {
+                sayHello()
+            })
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
-            Text(text).multilineTextAlignment(.center)
+            Spacer()
+            
+            Text(text)
+                .multilineTextAlignment(.center)
             
             Spacer()
             
             Button {
-                if fieldText.count > 0 {
-                    text = "Hello " + fieldText + "!"
-                }
+                sayHello()
             } label: {
                 Text("Say Hello")
                     .padding()
@@ -33,6 +36,12 @@ struct ContentView: View {
                     .font(.headline)
             }
         }.padding()
+    }
+    
+    func sayHello() {
+        if fieldText.count > 0 {
+            text = "Hello " + fieldText + "!"
+        }
     }
 }
 
