@@ -7,28 +7,26 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
-    @State var fieldText = ""
-    @State var text = ""
+    @ObservedObject var signUpForm = SignUpFormModel()
+    @State var signUpFormErrors = [String: String]()
     
     var body: some View {
         VStack {
-            TextField("Enter your name", text: $fieldText, onCommit: {
-                sayHello()
-            })
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+            SignUpFormField(form: signUpForm, placeholder: "First name", error: signUpFormErrors["firstName"] ?? "", text: $signUpForm.firstName)
+            SignUpFormField(form: signUpForm, placeholder: "Last name", error: signUpFormErrors["lastName"] ?? "", text: $signUpForm.lastName)
+            SignUpFormField(form: signUpForm, placeholder: "Email", error: signUpFormErrors["email"] ?? "", text: $signUpForm.email)
+            SignUpFormField(form: signUpForm, placeholder: "Phone", error: signUpFormErrors["phone"] ?? "", text: $signUpForm.phone)
+            SignUpFormField(form: signUpForm, placeholder: "Password", error: signUpFormErrors["password"] ?? "", text: $signUpForm.password)
+            SignUpFormField(form: signUpForm, placeholder: "Password", error: signUpFormErrors["password"] ?? "", text: $signUpForm.passwordConfirmation)
             
             Spacer()
             
-            Text(text)
-                .multilineTextAlignment(.center)
-            
-            Spacer()
-            
-            Button {
-                sayHello()
+            Button{
+                signUpFormErrors = SignUpFormValidationService.isFormValid(form: signUpForm)
             } label: {
-                Text("Say Hello")
+                Text("Submit")
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(Color.blue.cornerRadius(10))
@@ -37,13 +35,30 @@ struct ContentView: View {
             }
         }.padding()
     }
-    
-    func sayHello() {
-        if fieldText.count > 0 {
-            text = "Hello " + fieldText + "!"
+}
+
+
+struct SignUpFormField: View {
+    @ObservedObject var form: SignUpFormModel
+    var placeholder: String
+    var error: String
+    var text: Binding<String>
+
+    var body: some View {
+        if placeholder.lowercased().contains("password") {
+            SecureField(placeholder, text: text)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+        } else {
+            TextField(placeholder, text: text)
+                .keyboardType(.phonePad)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
         }
+        Text(error)
+            .foregroundColor(.red)
+            .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
