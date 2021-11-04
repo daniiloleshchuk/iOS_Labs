@@ -8,9 +8,9 @@
 import Foundation
 
 
-class SignUpFormValidationService {
+class SignUpValidationService {
     
-    static public func isFormValid(form: SignUpFormModel) -> [String: String] {
+    static public func isFormValid(form: SignUpModel) -> [String: String] {
         var errors = [String: String]()
 
         if form.firstName.isEmpty {
