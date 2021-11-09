@@ -14,5 +14,5 @@ struct SignUpModel {
     var email: String
     var phone: String
     var password: String
-    var passwordConfirmation: String
+    var confirmation: String
 }

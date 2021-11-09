@@ -13,24 +13,24 @@ struct SignUp: View {
     
     var body: some View {
         VStack {
-            SignUpField(placeholder: Constants.firstNamePlaceholder,
-                        error: viewModel.errors["firstName"] ?? Constants.emptyErrorMessage,
+            SignUpField(type: SignUpFieldType.firstName,
+                        error: $viewModel.errors["firstName"],
                         text: $viewModel.firstName)
-            SignUpField(placeholder: Constants.lastNamePlaceholder,
+            SignUpField(type: SignUpFieldType.lastName,
                         error: viewModel.errors["lastName"] ?? Constants.emptyErrorMessage,
                         text: $viewModel.lastName)
-            SignUpField(placeholder: Constants.emailPlaceholder,
+            SignUpField(type: SignUpFieldType.email,
                         error: viewModel.errors["email"] ?? Constants.emptyErrorMessage,
                         text: $viewModel.email)
-            SignUpField(placeholder: Constants.phonePlaceholder,
+            SignUpField(type: SignUpFieldType.phone,
                         error: viewModel.errors["phone"] ?? Constants.emptyErrorMessage,
                         text: $viewModel.phone)
-            SignUpField(placeholder: Constants.passwordPlaceholder,
+            SignUpField(type: SignUpFieldType.password,
                         error: viewModel.errors["password"] ?? Constants.emptyErrorMessage,
                         text: $viewModel.password)
-            SignUpField(placeholder: Constants.passwordConfirmationPlaceholder,
+            SignUpField(type: SignUpFieldType.confirmation,
                         error: viewModel.errors["password"] ?? Constants.emptyErrorMessage,
-                        text: $viewModel.passwordConfirmation)
+                        text: $viewModel.confirmation)
             
             Spacer()
             
@@ -46,16 +46,11 @@ struct SignUp: View {
             }
         }.padding()
     }
-    
     enum Constants {
-        static let firstNamePlaceholder = "First name"
-        static let lastNamePlaceholder = "Last name"
-        static let emailPlaceholder = "Email"
-        static let phonePlaceholder = "Phone"
-        static let passwordPlaceholder = "Password"
-        static let passwordConfirmationPlaceholder = "Password confirmation"
         static let emptyErrorMessage = ""
     }
+    
+
 }
 
 

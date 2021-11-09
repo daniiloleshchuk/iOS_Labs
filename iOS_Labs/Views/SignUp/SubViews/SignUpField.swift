@@ -8,24 +8,25 @@
 import SwiftUI
 
 struct SignUpField: View {
-    var placeholder: String
-    var error: String
+    let type: SignUpFieldType
+    var error: Binding<String>
     var text: Binding<String>
 
     var body: some View {
-        if placeholder.lowercased().contains(Constants.password) {
-            SecureField(placeholder, text: text)
+        switch type {
+        case .firstName, .lastName:
+            TextField(type.placeholder(), text: text)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-        } else if placeholder.lowercased().contains(Constants.phone) {
-            TextField(placeholder, text: text)
-                .keyboardType(.phonePad)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-        } else if placeholder.lowercased().contains(Constants.email) {
-            TextField(placeholder, text: text)
+        case .email:
+            TextField(type.placeholder(), text: text)
                 .keyboardType(.emailAddress)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-        } else {
-            TextField(placeholder, text: text)
+        case .phone:
+            TextField(type.placeholder(), text: text)
+                .keyboardType(.phonePad)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+        case .password, .confirmation:
+            SecureField(type.placeholder(), text: text)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
         }
         Text(error)
@@ -39,9 +40,39 @@ struct SignUpField: View {
     }
 }
 
+enum SignUpFieldType {
+    case firstName, lastName, email, phone, password, confirmation
+    
+    func placeholder() -> String {
+        switch self {
+        case .firstName:
+            return Constants.firstNamePlaceholder
+        case .lastName:
+            return Constants.lastNamePlaceholder
+        case .email:
+            return Constants.emailPlaceholder
+        case .phone:
+            return Constants.phonePlaceholder
+        case .password:
+            return Constants.passwordPlaceholder
+        case .confirmation:
+            return Constants.confirmationPlaceholder
+        }
+    }
+    
+    enum Constants {
+        static let firstNamePlaceholder = "First name"
+        static let lastNamePlaceholder = "Last name"
+        static let emailPlaceholder = "Email"
+        static let phonePlaceholder = "Phone"
+        static let passwordPlaceholder = "Password"
+        static let confirmationPlaceholder = "Password confirmation"
+    }
+}
+
 struct SignUpField_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpField(placeholder: Constants.placeholder,
+        SignUpField(type: .firstName,
                     error: Constants.error,
                     text: .constant(Constants.text))
     }

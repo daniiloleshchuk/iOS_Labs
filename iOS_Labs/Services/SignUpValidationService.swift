@@ -28,8 +28,8 @@ class SignUpValidationService {
         if !isPasswordValid(text: form.password) {
             errors["password"] = "Password should have at least 8 symbols"
         }
-        if !isPasswordConfirmationValid(password: form.password, passwordConfirmation: form.passwordConfirmation) {
-            errors["passwordConfirmation"] = "Passwords don't match"
+        if !isConfirmationValid(password: form.password, confirmation: form.confirmation) {
+            errors["confirmation"] = "Passwords don't match"
         }
 
         return errors
@@ -49,8 +49,8 @@ class SignUpValidationService {
          return text.count >= 8
      }
 
-     static func isPasswordConfirmationValid(password: String, passwordConfirmation: String) -> Bool {
-         return isPasswordValid(text: password) && (password == passwordConfirmation)
+     static func isConfirmationValid(password: String, confirmation: String) -> Bool {
+         return isPasswordValid(text: password) && (password == confirmation)
      }
 
  }

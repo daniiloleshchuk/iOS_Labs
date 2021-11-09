@@ -14,8 +14,8 @@ class SignUpViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var phone: String = ""
     @Published var password: String = ""
-    @Published var passwordConfirmation: String = ""
-    var errors = [String: String]()
+    @Published var confirmation: String = ""
+    @Published var errors = [String: String]()
     
     func validateForm() {
         let form = SignUpModel(firstName: firstName,
@@ -23,7 +23,7 @@ class SignUpViewModel: ObservableObject {
                                    email: email,
                                    phone: phone,
                                    password: password,
-                                   passwordConfirmation: passwordConfirmation)
+                                   confirmation: confirmation)
         self.errors = SignUpValidationService.isFormValid(form: form)
     }
     
