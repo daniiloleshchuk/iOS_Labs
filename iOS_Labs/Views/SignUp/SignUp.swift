@@ -20,7 +20,7 @@ struct SignUp: View {
         VStack {
             ForEach(signUp.fields) { field in
                 SignUpField(field: field,
-                            error: errors[field.type] ?? Constants.emptyError)
+                            error: $errors[field.type])
             }
             
             Spacer()
@@ -52,7 +52,6 @@ struct SignUp_Previews: PreviewProvider {
         SignUp()
     }
     enum Constants {
-        static let errors = [SignUpFieldType.firstName: "error",
-                             SignUpFieldType.password: "error"]
+        static let errors = [SignUpFieldType: String]()
     }
 }

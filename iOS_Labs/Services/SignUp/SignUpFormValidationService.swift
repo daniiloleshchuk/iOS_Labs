@@ -12,22 +12,22 @@ class SignUpValidationService {
     static func vaildateForm(form: SignUpViewModel) -> [SignUpFieldType: String] {
         var errors = [SignUpFieldType: String]()
         for (_, field) in form.fields.enumerated() {
-            if let error = getFieldError(field: field) {
+            if let error = fieldError(field: field) {
                 errors[field.type] = error
             }
         }
         return errors
     }
 
-    static func getFieldError(field: SignUpFieldModel) -> String? {
+    static func fieldError(field: SignUpFieldModel) -> String? {
         switch field.type {
             case .firstName, .lastName:
                 if (field.value.isEmpty) {
-                    return field.type.getErrorText()
+                    return field.type.errorText()
                 }
             case .email, .phone, .password:
-                if (!isTextValid(text: field.value, regex: field.type.getRegEx())) {
-                    return field.type.getErrorText()
+                if (!isTextValid(text: field.value, regex: field.type.regExp())) {
+                    return field.type.errorText()
                 }
             default:
                 return nil
