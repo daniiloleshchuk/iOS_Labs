@@ -17,7 +17,7 @@ enum SignUpFieldType {
     case confirmation
     case unknown
     
-    func getErrorText() -> String {
+    func errorText() -> String {
         switch self {
         case .firstName:
             return SignUpError.firstName
@@ -36,7 +36,7 @@ enum SignUpFieldType {
         }
     }
     
-    func getRegEx() -> String {
+    func regExp() -> String {
         switch self {
         case .email:
             return SignUpRegEx.email
