@@ -7,25 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4E13C358F8A1BF545BD3B96 /* Pods_iOS_Labs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89A016E2038CED844460ECB /* Pods_iOS_Labs.framework */; };
 		C300E4BB2753E79700E87EFE /* SignUpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C300E4BA2753E79700E87EFE /* SignUpError.swift */; };
 		C300E4BD2753EADD00E87EFE /* SignUpFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C300E4BC2753EADD00E87EFE /* SignUpFieldType.swift */; };
 		C300E4C02753EC7600E87EFE /* SignUpRegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C300E4BF2753EC7600E87EFE /* SignUpRegEx.swift */; };
 		C31B565F272D8E88008E561A /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B565E272D8E88008E561A /* SignUpViewModel.swift */; };
 		C31B5661272D9031008E561A /* SignUpFormValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B5660272D9031008E561A /* SignUpFormValidationService.swift */; };
+		C331C9AB27553C4C00F549CF /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = C331C9AA27553C4C00F549CF /* General.swift */; };
 		C35258AB27033DA100906C74 /* iOS_LabsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35258AA27033DA100906C74 /* iOS_LabsApp.swift */; };
 		C35258AD27033DA100906C74 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35258AC27033DA100906C74 /* SignUp.swift */; };
 		C35258AF27033DA200906C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35258AE27033DA200906C74 /* Assets.xcassets */; };
 		C35258B227033DA200906C74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35258B127033DA200906C74 /* Preview Assets.xcassets */; };
 		C378006B27315C2F0045BF29 /* SignUpFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */; };
 		C378007227315D620045BF29 /* SignUpField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C378007127315D620045BF29 /* SignUpField.swift */; };
+		C3AC8B642755404800991DA6 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B632755404700991DA6 /* Photos.swift */; };
+		C3AC8B682755407400991DA6 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B672755407400991DA6 /* Users.swift */; };
+		C3AC8B6B2755444000991DA6 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B6A2755444000991DA6 /* PhotoController.swift */; };
+		C3AC8B72275555AB00991DA6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B71275555AB00991DA6 /* User.swift */; };
+		C3AC8B7427555CF400991DA6 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B7327555CF400991DA6 /* UserDefaultsService.swift */; };
+		C3AC8B7727555D3C00991DA6 /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B7627555D3C00991DA6 /* UsersService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17C656671F02740AAAFB6578 /* Pods-iOS_Labs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Labs.release.xcconfig"; path = "Target Support Files/Pods-iOS_Labs/Pods-iOS_Labs.release.xcconfig"; sourceTree = "<group>"; };
+		458259DE5BC12BA714AD0745 /* Pods-iOS_Labs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Labs.debug.xcconfig"; path = "Target Support Files/Pods-iOS_Labs/Pods-iOS_Labs.debug.xcconfig"; sourceTree = "<group>"; };
 		C300E4BA2753E79700E87EFE /* SignUpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpError.swift; sourceTree = "<group>"; };
 		C300E4BC2753EADD00E87EFE /* SignUpFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldType.swift; sourceTree = "<group>"; };
 		C300E4BF2753EC7600E87EFE /* SignUpRegEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRegEx.swift; sourceTree = "<group>"; };
 		C31B565E272D8E88008E561A /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		C31B5660272D9031008E561A /* SignUpFormValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormValidationService.swift; sourceTree = "<group>"; };
+		C331C9AA27553C4C00F549CF /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 		C35258A727033DA100906C74 /* iOS_Labs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Labs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35258AA27033DA100906C74 /* iOS_LabsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_LabsApp.swift; sourceTree = "<group>"; };
 		C35258AC27033DA100906C74 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
@@ -33,6 +44,13 @@
 		C35258B127033DA200906C74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldModel.swift; sourceTree = "<group>"; };
 		C378007127315D620045BF29 /* SignUpField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpField.swift; sourceTree = "<group>"; };
+		C3AC8B632755404700991DA6 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		C3AC8B672755407400991DA6 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		C3AC8B6A2755444000991DA6 /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
+		C3AC8B71275555AB00991DA6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C3AC8B7327555CF400991DA6 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		C3AC8B7627555D3C00991DA6 /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
+		E89A016E2038CED844460ECB /* Pods_iOS_Labs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Labs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,16 +58,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E13C358F8A1BF545BD3B96 /* Pods_iOS_Labs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46E9A4BC4621567DAF7545FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E89A016E2038CED844460ECB /* Pods_iOS_Labs.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C300E4BE2753EBA300E87EFE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C300E4BF2753EC7600E87EFE /* SignUpRegEx.swift */,
+				C3AC8B6E2755556500991DA6 /* SignUp */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -59,6 +86,8 @@
 			children = (
 				C35258A927033DA100906C74 /* iOS_Labs */,
 				C35258A827033DA100906C74 /* Products */,
+				CF7C72ED710936C0036B9414 /* Pods */,
+				46E9A4BC4621567DAF7545FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +102,7 @@
 		C35258A927033DA100906C74 /* iOS_Labs */ = {
 			isa = PBXGroup;
 			children = (
+				C3AC8B692755423E00991DA6 /* Controllers */,
 				C300E4BE2753EBA300E87EFE /* Utils */,
 				C378006C27315C4C0045BF29 /* Services */,
 				C378006927315C150045BF29 /* Models */,
@@ -96,7 +126,10 @@
 		C378006727315BDD0045BF29 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C3AC8B662755406500991DA6 /* Users */,
+				C3AC8B622755403300991DA6 /* Photos */,
 				C378006D27315D110045BF29 /* SignUp */,
+				C331C9AA27553C4C00F549CF /* General.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,7 +137,7 @@
 		C378006827315C0E0045BF29 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C31B565E272D8E88008E561A /* SignUpViewModel.swift */,
+				C3AC8B6F2755557500991DA6 /* SignUp */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -112,9 +145,7 @@
 		C378006927315C150045BF29 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */,
-				C300E4BA2753E79700E87EFE /* SignUpError.swift */,
-				C300E4BC2753EADD00E87EFE /* SignUpFieldType.swift */,
+				C3AC8B6C2755552A00991DA6 /* SignUp */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,7 +153,9 @@
 		C378006C27315C4C0045BF29 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C31B5660272D9031008E561A /* SignUpFormValidationService.swift */,
+				C3AC8B7527555D2D00991DA6 /* Users */,
+				C3AC8B6D2755554A00991DA6 /* SignUp */,
+				C3AC8B7327555CF400991DA6 /* UserDefaultsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -144,6 +177,82 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
+		C3AC8B622755403300991DA6 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				C3AC8B632755404700991DA6 /* Photos.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		C3AC8B662755406500991DA6 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				C3AC8B672755407400991DA6 /* Users.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		C3AC8B692755423E00991DA6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3AC8B6A2755444000991DA6 /* PhotoController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C3AC8B6C2755552A00991DA6 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */,
+				C300E4BA2753E79700E87EFE /* SignUpError.swift */,
+				C300E4BC2753EADD00E87EFE /* SignUpFieldType.swift */,
+				C3AC8B71275555AB00991DA6 /* User.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		C3AC8B6D2755554A00991DA6 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C31B5660272D9031008E561A /* SignUpFormValidationService.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		C3AC8B6E2755556500991DA6 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C300E4BF2753EC7600E87EFE /* SignUpRegEx.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		C3AC8B6F2755557500991DA6 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C31B565E272D8E88008E561A /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		C3AC8B7527555D2D00991DA6 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				C3AC8B7627555D3C00991DA6 /* UsersService.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		CF7C72ED710936C0036B9414 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				458259DE5BC12BA714AD0745 /* Pods-iOS_Labs.debug.xcconfig */,
+				17C656671F02740AAAFB6578 /* Pods-iOS_Labs.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +260,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C35258B527033DA200906C74 /* Build configuration list for PBXNativeTarget "iOS_Labs" */;
 			buildPhases = (
+				D0FB0B2F053143DAAB9AF1CD /* [CP] Check Pods Manifest.lock */,
 				C35258A327033DA000906C74 /* Sources */,
 				C35258A427033DA000906C74 /* Frameworks */,
 				C35258A527033DA000906C74 /* Resources */,
+				E921A16BB8FA89E68AD3F56F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,19 +320,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D0FB0B2F053143DAAB9AF1CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS_Labs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E921A16BB8FA89E68AD3F56F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_Labs/Pods-iOS_Labs-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_Labs/Pods-iOS_Labs-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS_Labs/Pods-iOS_Labs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C35258A327033DA000906C74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3AC8B7727555D3C00991DA6 /* UsersService.swift in Sources */,
 				C378007227315D620045BF29 /* SignUpField.swift in Sources */,
 				C31B565F272D8E88008E561A /* SignUpViewModel.swift in Sources */,
 				C378006B27315C2F0045BF29 /* SignUpFieldModel.swift in Sources */,
 				C300E4C02753EC7600E87EFE /* SignUpRegEx.swift in Sources */,
+				C3AC8B682755407400991DA6 /* Users.swift in Sources */,
+				C331C9AB27553C4C00F549CF /* General.swift in Sources */,
+				C3AC8B72275555AB00991DA6 /* User.swift in Sources */,
+				C3AC8B642755404800991DA6 /* Photos.swift in Sources */,
 				C35258AD27033DA100906C74 /* SignUp.swift in Sources */,
 				C300E4BD2753EADD00E87EFE /* SignUpFieldType.swift in Sources */,
 				C31B5661272D9031008E561A /* SignUpFormValidationService.swift in Sources */,
 				C35258AB27033DA100906C74 /* iOS_LabsApp.swift in Sources */,
+				C3AC8B7427555CF400991DA6 /* UserDefaultsService.swift in Sources */,
+				C3AC8B6B2755444000991DA6 /* PhotoController.swift in Sources */,
 				C300E4BB2753E79700E87EFE /* SignUpError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +507,7 @@
 		};
 		C35258B627033DA200906C74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 458259DE5BC12BA714AD0745 /* Pods-iOS_Labs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -377,6 +538,7 @@
 		};
 		C35258B727033DA200906C74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17C656671F02740AAAFB6578 /* Pods-iOS_Labs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
