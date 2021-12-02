@@ -10,7 +10,11 @@ import SwiftUI
 
 struct SignUp: View {
     @ObservedObject var signUp = SignUpViewModel()
-    @State var errors = [SignUpFieldType :String]()
+    @State var errors = [SignUpFieldType: String]()
+    
+    init() {
+        signUp = SignUpViewModel()
+    }
     
     var body: some View {
         VStack {
@@ -23,6 +27,10 @@ struct SignUp: View {
 
             Button {
                 errors = SignUpValidationService.vaildateForm(form: signUp)
+                if (errors.isEmpty) {
+                    let user = User(fields: signUp.fields)
+                    UserService.save(newUser: user)
+                }
             } label: {
                 Text(Constants.submit)
                     .padding()
@@ -41,7 +49,7 @@ struct SignUp: View {
 
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
-        SignUp(signUp: SignUpViewModel(), errors: Constants.errors)
+        SignUp()
     }
     enum Constants {
         static let errors = [SignUpFieldType: String]()
