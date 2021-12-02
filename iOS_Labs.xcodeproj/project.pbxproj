@@ -18,6 +18,11 @@
 		C35258AD27033DA100906C74 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35258AC27033DA100906C74 /* SignUp.swift */; };
 		C35258AF27033DA200906C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35258AE27033DA200906C74 /* Assets.xcassets */; };
 		C35258B227033DA200906C74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35258B127033DA200906C74 /* Preview Assets.xcassets */; };
+		C354D17E2758301F00F73E0C /* Unsplash-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C354D17D2758301F00F73E0C /* Unsplash-Info.plist */; };
+		C354D181275834EC00F73E0C /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354D180275834EC00F73E0C /* PhotoModel.swift */; };
+		C354D1842758360B00F73E0C /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354D1832758360B00F73E0C /* PhotoViewModel.swift */; };
+		C354D1872758368200F73E0C /* Img.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354D1862758368200F73E0C /* Img.swift */; };
+		C354D18C275837D500F73E0C /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354D18B275837D500F73E0C /* ImageModel.swift */; };
 		C378006B27315C2F0045BF29 /* SignUpFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */; };
 		C378007227315D620045BF29 /* SignUpField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C378007127315D620045BF29 /* SignUpField.swift */; };
 		C3AC8B642755404800991DA6 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B632755404700991DA6 /* Photos.swift */; };
@@ -42,6 +47,11 @@
 		C35258AC27033DA100906C74 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		C35258AE27033DA200906C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C35258B127033DA200906C74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C354D17D2758301F00F73E0C /* Unsplash-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unsplash-Info.plist"; sourceTree = "<group>"; };
+		C354D180275834EC00F73E0C /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		C354D1832758360B00F73E0C /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		C354D1862758368200F73E0C /* Img.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Img.swift; sourceTree = "<group>"; };
+		C354D18B275837D500F73E0C /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldModel.swift; sourceTree = "<group>"; };
 		C378007127315D620045BF29 /* SignUpField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpField.swift; sourceTree = "<group>"; };
 		C3AC8B632755404700991DA6 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
@@ -76,6 +86,7 @@
 		C300E4BE2753EBA300E87EFE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C354D18D275969B300F73E0C /* Photos */,
 				C3AC8B6E2755556500991DA6 /* SignUp */,
 			);
 			path = Utils;
@@ -102,7 +113,6 @@
 		C35258A927033DA100906C74 /* iOS_Labs */ = {
 			isa = PBXGroup;
 			children = (
-				C3AC8B692755423E00991DA6 /* Controllers */,
 				C300E4BE2753EBA300E87EFE /* Utils */,
 				C378006C27315C4C0045BF29 /* Services */,
 				C378006927315C150045BF29 /* Models */,
@@ -111,6 +121,7 @@
 				C35258AA27033DA100906C74 /* iOS_LabsApp.swift */,
 				C35258AE27033DA200906C74 /* Assets.xcassets */,
 				C35258B027033DA200906C74 /* Preview Content */,
+				C354D17D2758301F00F73E0C /* Unsplash-Info.plist */,
 			);
 			path = iOS_Labs;
 			sourceTree = "<group>";
@@ -121,6 +132,39 @@
 				C35258B127033DA200906C74 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C354D17F275834D500F73E0C /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				C354D180275834EC00F73E0C /* PhotoModel.swift */,
+				C354D18B275837D500F73E0C /* ImageModel.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		C354D182275835EA00F73E0C /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				C354D1832758360B00F73E0C /* PhotoViewModel.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		C354D1852758366400F73E0C /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				C354D1862758368200F73E0C /* Img.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		C354D18D275969B300F73E0C /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				C3AC8B6A2755444000991DA6 /* PhotoController.swift */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 		C378006727315BDD0045BF29 /* Views */ = {
@@ -137,6 +181,7 @@
 		C378006827315C0E0045BF29 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C354D182275835EA00F73E0C /* Photos */,
 				C3AC8B6F2755557500991DA6 /* SignUp */,
 			);
 			path = ViewModels;
@@ -145,6 +190,7 @@
 		C378006927315C150045BF29 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C354D17F275834D500F73E0C /* Photos */,
 				C3AC8B6C2755552A00991DA6 /* SignUp */,
 			);
 			path = Models;
@@ -180,6 +226,7 @@
 		C3AC8B622755403300991DA6 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				C354D1852758366400F73E0C /* SubViews */,
 				C3AC8B632755404700991DA6 /* Photos.swift */,
 			);
 			path = Photos;
@@ -191,14 +238,6 @@
 				C3AC8B672755407400991DA6 /* Users.swift */,
 			);
 			path = Users;
-			sourceTree = "<group>";
-		};
-		C3AC8B692755423E00991DA6 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				C3AC8B6A2755444000991DA6 /* PhotoController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		C3AC8B6C2755552A00991DA6 /* SignUp */ = {
@@ -313,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C354D17E2758301F00F73E0C /* Unsplash-Info.plist in Resources */,
 				C35258B227033DA200906C74 /* Preview Assets.xcassets in Resources */,
 				C35258AF27033DA200906C74 /* Assets.xcassets in Resources */,
 			);
@@ -379,7 +419,11 @@
 				C35258AD27033DA100906C74 /* SignUp.swift in Sources */,
 				C300E4BD2753EADD00E87EFE /* SignUpFieldType.swift in Sources */,
 				C31B5661272D9031008E561A /* SignUpFormValidationService.swift in Sources */,
+				C354D18C275837D500F73E0C /* ImageModel.swift in Sources */,
 				C35258AB27033DA100906C74 /* iOS_LabsApp.swift in Sources */,
+				C354D1872758368200F73E0C /* Img.swift in Sources */,
+				C354D1842758360B00F73E0C /* PhotoViewModel.swift in Sources */,
+				C354D181275834EC00F73E0C /* PhotoModel.swift in Sources */,
 				C3AC8B7427555CF400991DA6 /* UserDefaultsService.swift in Sources */,
 				C3AC8B6B2755444000991DA6 /* PhotoController.swift in Sources */,
 				C300E4BB2753E79700E87EFE /* SignUpError.swift in Sources */,

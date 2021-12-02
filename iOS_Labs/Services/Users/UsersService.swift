@@ -17,7 +17,7 @@ struct UserService {
     static let dataKey = "users"
     
     static func getAll() -> [User]? {
-        guard let allUsers = dataService.getDataByKey(key: dataKey) else {
+        guard let allUsers = dataService.dataByKey(key: dataKey) else {
             return nil
         }
         return getDecodedUsers(from: allUsers)

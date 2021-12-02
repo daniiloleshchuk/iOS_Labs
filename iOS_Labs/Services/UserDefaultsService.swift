@@ -14,14 +14,14 @@ class UserDefaultsService {
     private let userDefaults = UserDefaults.standard
 
     func addData(data: Data, key: String) {
-        guard var persisted = self.getDataByKey(key: key) else {
+        guard var persisted = self.dataByKey(key: key) else {
             return userDefaults.set([data], forKey: key)
         }
         persisted.append(data)
         userDefaults.set(persisted, forKey: key)
     }
 
-    func getDataByKey(key: String) -> [Data]? {
+    func dataByKey(key: String) -> [Data]? {
         userDefaults.array(forKey: key) as? [Data]
     }
 
