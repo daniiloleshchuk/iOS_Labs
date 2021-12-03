@@ -23,7 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-=======
 		C354D17E2758301F00F73E0C /* Unsplash-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C354D17D2758301F00F73E0C /* Unsplash-Info.plist */; };
 		C354D181275834EC00F73E0C /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354D180275834EC00F73E0C /* PhotoModel.swift */; };
 		C354D1842758360B00F73E0C /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354D1832758360B00F73E0C /* PhotoViewModel.swift */; };
@@ -83,10 +82,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C300E4BE2753EBA300E87EFE /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				C300E4BF2753EC7600E87EFE /* SignUpRegEx.swift */,
 		46E9A4BC4621567DAF7545FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,10 +141,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		C378006727315BDD0045BF29 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C378006D27315D110045BF29 /* SignUp */,
 		C354D17F275834D500F73E0C /* Photos */ = {
 			isa = PBXGroup;
 			children = (
