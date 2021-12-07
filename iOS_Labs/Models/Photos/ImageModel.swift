@@ -16,8 +16,8 @@ class ImageModel: ObservableObject {
         self.image = UIImage(systemName: Constants.imagePlaceholderName)!
         DispatchQueue.global().async {
             let data = try? Data(contentsOf: url!)
-            DispatchQueue.global().async { [self] in
-                image = UIImage(data: data!)!
+            DispatchQueue.global().async { [weak self] in
+                self?.image = UIImage(data: data!)!
             }
         }
     }

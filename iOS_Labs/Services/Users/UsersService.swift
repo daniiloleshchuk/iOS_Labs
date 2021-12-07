@@ -9,21 +9,27 @@ import Foundation
 
 
 struct UserService {
-    static let dataService: UserDefaultsService = .shared
-    static let encoder = JSONEncoder()
-    static let decoder = JSONDecoder()
-
-
-    static let dataKey = "users"
+    private var dataService: UserDefaultsService
+    private var encoder: JSONEncoder
+    private var decoder: JSONDecoder
+    static let shared = UserService()
     
-    static func getAll() -> [User]? {
+    private init() {
+        decoder = JSONDecoder()
+        encoder = JSONEncoder()
+        dataService = .shared
+    }
+
+    let dataKey = "users"
+    
+    func getAll() -> [User]? {
         guard let allUsers = dataService.dataByKey(key: dataKey) else {
             return nil
         }
         return getDecodedUsers(from: allUsers)
     }
 
-    static func save(newUser: User) {
+    func save(newUser: User) {
         do {
             let newUserData = try encoder.encode(newUser)
             dataService.addData(data: newUserData, key: dataKey)
@@ -31,7 +37,7 @@ struct UserService {
         }
     }
 
-    static func getDecodedUsers(from users: [Data]) -> [User] {
+    private func getDecodedUsers(from users: [Data]) -> [User] {
         do {
             return try users.map {
                 user in try decoder.decode(User.self, from: user)

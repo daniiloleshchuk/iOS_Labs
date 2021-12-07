@@ -18,55 +18,50 @@
 		C35258AD27033DA100906C74 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35258AC27033DA100906C74 /* SignUp.swift */; };
 		C35258AF27033DA200906C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35258AE27033DA200906C74 /* Assets.xcassets */; };
 		C35258B227033DA200906C74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35258B127033DA200906C74 /* Preview Assets.xcassets */; };
-		C378006B27315C2F0045BF29 /* SignUpFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */; };
-		C378007227315D620045BF29 /* SignUpField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C378007127315D620045BF29 /* SignUpField.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
 		C354D17E2758301F00F73E0C /* Unsplash-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C354D17D2758301F00F73E0C /* Unsplash-Info.plist */; };
 		C354D181275834EC00F73E0C /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354D180275834EC00F73E0C /* PhotoModel.swift */; };
 		C354D1842758360B00F73E0C /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354D1832758360B00F73E0C /* PhotoViewModel.swift */; };
-		C354D1872758368200F73E0C /* Img.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354D1862758368200F73E0C /* Img.swift */; };
+		C354D1872758368200F73E0C /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354D1862758368200F73E0C /* ImageView.swift */; };
 		C354D18C275837D500F73E0C /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354D18B275837D500F73E0C /* ImageModel.swift */; };
 		C378006B27315C2F0045BF29 /* SignUpFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */; };
 		C378007227315D620045BF29 /* SignUpField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C378007127315D620045BF29 /* SignUpField.swift */; };
 		C3AC8B642755404800991DA6 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B632755404700991DA6 /* Photos.swift */; };
 		C3AC8B682755407400991DA6 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B672755407400991DA6 /* Users.swift */; };
-		C3AC8B6B2755444000991DA6 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B6A2755444000991DA6 /* PhotoController.swift */; };
+		C3AC8B6B2755444000991DA6 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B6A2755444000991DA6 /* PhotoManager.swift */; };
 		C3AC8B72275555AB00991DA6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B71275555AB00991DA6 /* User.swift */; };
 		C3AC8B7427555CF400991DA6 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B7327555CF400991DA6 /* UserDefaultsService.swift */; };
 		C3AC8B7727555D3C00991DA6 /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B7627555D3C00991DA6 /* UsersService.swift */; };
+		C3BCAE6E275E99C40029D1EB /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCAE6D275E99C40029D1EB /* KeychainManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17C656671F02740AAAFB6578 /* Pods-iOS_Labs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Labs.release.xcconfig"; path = "Target Support Files/Pods-iOS_Labs/Pods-iOS_Labs.release.xcconfig"; sourceTree = "<group>"; };
 		458259DE5BC12BA714AD0745 /* Pods-iOS_Labs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Labs.debug.xcconfig"; path = "Target Support Files/Pods-iOS_Labs/Pods-iOS_Labs.debug.xcconfig"; sourceTree = "<group>"; };
-		C300E4BA2753E79700E87EFE /* SignUpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpError.swift; sourceTree = "<group>"; };
-		C300E4BC2753EADD00E87EFE /* SignUpFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldType.swift; sourceTree = "<group>"; };
+		C300E4BA2753E79700E87EFE /* SignUpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpError.swift; path = iOS_Labs/Models/SignUpError.swift; sourceTree = SOURCE_ROOT; };
+		C300E4BC2753EADD00E87EFE /* SignUpFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpFieldType.swift; path = iOS_Labs/Models/SignUpFieldType.swift; sourceTree = SOURCE_ROOT; };
 		C300E4BF2753EC7600E87EFE /* SignUpRegEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRegEx.swift; sourceTree = "<group>"; };
-		C31B565E272D8E88008E561A /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		C31B5660272D9031008E561A /* SignUpFormValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormValidationService.swift; sourceTree = "<group>"; };
+		C31B565E272D8E88008E561A /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewModel.swift; path = iOS_Labs/ViewModels/SignUpViewModel.swift; sourceTree = SOURCE_ROOT; };
+		C31B5660272D9031008E561A /* SignUpFormValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpFormValidationService.swift; path = iOS_Labs/Services/SignUpFormValidationService.swift; sourceTree = SOURCE_ROOT; };
 		C331C9AA27553C4C00F549CF /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 		C35258A727033DA100906C74 /* iOS_Labs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Labs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35258AA27033DA100906C74 /* iOS_LabsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_LabsApp.swift; sourceTree = "<group>"; };
 		C35258AC27033DA100906C74 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		C35258AE27033DA200906C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C35258B127033DA200906C74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldModel.swift; sourceTree = "<group>"; };
-		C378007127315D620045BF29 /* SignUpField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpField.swift; sourceTree = "<group>"; };
 		C354D17D2758301F00F73E0C /* Unsplash-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unsplash-Info.plist"; sourceTree = "<group>"; };
 		C354D180275834EC00F73E0C /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		C354D1832758360B00F73E0C /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
-		C354D1862758368200F73E0C /* Img.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Img.swift; sourceTree = "<group>"; };
+		C354D1862758368200F73E0C /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		C354D18B275837D500F73E0C /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
-		C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldModel.swift; sourceTree = "<group>"; };
+		C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpFieldModel.swift; path = iOS_Labs/Models/SignUpFieldModel.swift; sourceTree = SOURCE_ROOT; };
 		C378007127315D620045BF29 /* SignUpField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpField.swift; sourceTree = "<group>"; };
 		C3AC8B632755404700991DA6 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		C3AC8B672755407400991DA6 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
-		C3AC8B6A2755444000991DA6 /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
+		C3AC8B6A2755444000991DA6 /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
 		C3AC8B71275555AB00991DA6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C3AC8B7327555CF400991DA6 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		C3AC8B7627555D3C00991DA6 /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
+		C3BCAE6D275E99C40029D1EB /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		E89A016E2038CED844460ECB /* Pods_iOS_Labs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Labs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +90,7 @@
 			children = (
 				C354D18D275969B300F73E0C /* Photos */,
 				C3AC8B6E2755556500991DA6 /* SignUp */,
+				C3BCAE6D275E99C40029D1EB /* KeychainManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -161,7 +157,7 @@
 		C354D1852758366400F73E0C /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				C354D1862758368200F73E0C /* Img.swift */,
+				C354D1862758368200F73E0C /* ImageView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -169,7 +165,7 @@
 		C354D18D275969B300F73E0C /* Photos */ = {
 			isa = PBXGroup;
 			children = (
-				C3AC8B6A2755444000991DA6 /* PhotoController.swift */,
+				C3AC8B6A2755444000991DA6 /* PhotoManager.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -188,7 +184,6 @@
 		C378006827315C0E0045BF29 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C31B565E272D8E88008E561A /* SignUpViewModel.swift */,
 				C354D182275835EA00F73E0C /* Photos */,
 				C3AC8B6F2755557500991DA6 /* SignUp */,
 			);
@@ -198,9 +193,6 @@
 		C378006927315C150045BF29 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */,
-				C300E4BA2753E79700E87EFE /* SignUpError.swift */,
-				C300E4BC2753EADD00E87EFE /* SignUpFieldType.swift */,
 				C354D17F275834D500F73E0C /* Photos */,
 				C3AC8B6C2755552A00991DA6 /* SignUp */,
 			);
@@ -210,7 +202,6 @@
 		C378006C27315C4C0045BF29 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C31B5660272D9031008E561A /* SignUpFormValidationService.swift */,
 				C3AC8B7527555D2D00991DA6 /* Users */,
 				C3AC8B6D2755554A00991DA6 /* SignUp */,
 				C3AC8B7327555CF400991DA6 /* UserDefaultsService.swift */,
@@ -255,9 +246,9 @@
 		C3AC8B6C2755552A00991DA6 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */,
-				C300E4BA2753E79700E87EFE /* SignUpError.swift */,
 				C300E4BC2753EADD00E87EFE /* SignUpFieldType.swift */,
+				C300E4BA2753E79700E87EFE /* SignUpError.swift */,
+				C378006A27315C2F0045BF29 /* SignUpFieldModel.swift */,
 				C3AC8B71275555AB00991DA6 /* User.swift */,
 			);
 			path = SignUp;
@@ -423,6 +414,7 @@
 				C378007227315D620045BF29 /* SignUpField.swift in Sources */,
 				C31B565F272D8E88008E561A /* SignUpViewModel.swift in Sources */,
 				C378006B27315C2F0045BF29 /* SignUpFieldModel.swift in Sources */,
+				C3BCAE6E275E99C40029D1EB /* KeychainManager.swift in Sources */,
 				C300E4C02753EC7600E87EFE /* SignUpRegEx.swift in Sources */,
 				C35258AD27033DA100906C74 /* SignUp.swift in Sources */,
 				C300E4BD2753EADD00E87EFE /* SignUpFieldType.swift in Sources */,
@@ -437,11 +429,11 @@
 				C31B5661272D9031008E561A /* SignUpFormValidationService.swift in Sources */,
 				C354D18C275837D500F73E0C /* ImageModel.swift in Sources */,
 				C35258AB27033DA100906C74 /* iOS_LabsApp.swift in Sources */,
-				C354D1872758368200F73E0C /* Img.swift in Sources */,
+				C354D1872758368200F73E0C /* ImageView.swift in Sources */,
 				C354D1842758360B00F73E0C /* PhotoViewModel.swift in Sources */,
 				C354D181275834EC00F73E0C /* PhotoModel.swift in Sources */,
 				C3AC8B7427555CF400991DA6 /* UserDefaultsService.swift in Sources */,
-				C3AC8B6B2755444000991DA6 /* PhotoController.swift in Sources */,
+				C3AC8B6B2755444000991DA6 /* PhotoManager.swift in Sources */,
 				C300E4BB2753E79700E87EFE /* SignUpError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

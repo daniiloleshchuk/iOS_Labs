@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 
-struct PhotoController {
+struct PhotoManager {
     private static var API_BASE_URL: String {
         get {
             guard let filePath = Bundle.main.path(forResource: "Unsplash-Info", ofType: "plist") else {

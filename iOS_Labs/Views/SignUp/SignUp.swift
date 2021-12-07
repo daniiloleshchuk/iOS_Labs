@@ -11,16 +11,12 @@ import SwiftUI
 struct SignUp: View {
     @ObservedObject var signUp = SignUpViewModel()
     @State var errors = [SignUpFieldType: String]()
-    
-    init() {
-        signUp = SignUpViewModel()
-    }
+
     
     var body: some View {
         VStack {
             ForEach(signUp.fields) { field in
-                SignUpField(field: field,
-                            error: $errors[field.type])
+                SignUpField(field: field, error: $errors[field.type])
             }
             
             Spacer()
@@ -29,7 +25,7 @@ struct SignUp: View {
                 errors = SignUpValidationService.vaildateForm(form: signUp)
                 if (errors.isEmpty) {
                     let user = User(fields: signUp.fields)
-                    UserService.save(newUser: user)
+                    UserService.shared.save(newUser: user)
                 }
             } label: {
                 Text(Constants.submit)

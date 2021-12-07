@@ -12,7 +12,7 @@ class PhotosViewModel: ObservableObject {
      @Published var photos = [PhotoModel]()
 
      func loadPhotos() {
-         PhotoController.photos(action: {fetchedPhotos in
+         PhotoManager.photos(action: {fetchedPhotos in
              if let photos = fetchedPhotos {
                  self.photos = photos
              } else {

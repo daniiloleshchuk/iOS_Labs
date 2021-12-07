@@ -27,7 +27,7 @@ struct Users: View {
             }
         }
         .onAppear(perform: {
-            users = UserService.getAll()?.reversed()
+            users = UserService.shared.getAll()?.reversed()
         })
     }
     enum Constants {
