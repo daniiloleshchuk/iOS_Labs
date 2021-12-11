@@ -20,9 +20,24 @@ class UserDefaultsService {
         persisted.append(data)
         userDefaults.set(persisted, forKey: key)
     }
+    
+    func removeData(data: Data, key: String) {
+        guard var persisted = self.dataByKey(key: key) else {
+            return
+        }
+        if let index = persisted.firstIndex(of: data) {
+            persisted.remove(at: index)
+            userDefaults.set(persisted, forKey: key)
+        }
+    }
 
     func dataByKey(key: String) -> [Data]? {
         userDefaults.array(forKey: key) as? [Data]
+    }
+    
+    func saved(data: Data, key: String) -> Bool {
+        let arr = userDefaults.array(forKey: key) as? [Data]
+        return arr!.contains(data)
     }
 
 }
