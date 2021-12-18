@@ -12,6 +12,7 @@ struct Photo: View {
     var imageModel: ImageModel
     
     init(photoModel: PhotoModel) {
+        photoModel.isLiked = LikedPhotosService.shared.liked(photo: photoModel)
         self.photoModel = photoModel
         self.imageModel = ImageModel(imageURL: photoModel.regularImageUrl()!)
     }
@@ -21,12 +22,12 @@ struct Photo: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
         Text(photoModel.description ?? Constants.defaultDescription)
-        Button(action: {LikedPhotosService.shared.like(photo: photoModel)},
-               label: {Text(Constants.btnLikeLabel)})
+        LikeButton(isLiked: photoModel.isLiked) {
+            LikedPhotosService.shared.like(photo: photoModel)
+        }
     }
     
     enum Constants {
-        static let btnLikeLabel = "Like"
         static let defaultDescription = "Default description"
     }
 }

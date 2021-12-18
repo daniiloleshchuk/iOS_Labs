@@ -35,6 +35,7 @@
 		C3AC8B7427555CF400991DA6 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B7327555CF400991DA6 /* UserDefaultsService.swift */; };
 		C3AC8B7727555D3C00991DA6 /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC8B7627555D3C00991DA6 /* UsersService.swift */; };
 		C3BCAE6E275E99C40029D1EB /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCAE6D275E99C40029D1EB /* KeychainManager.swift */; };
+		C3F5572F2768C39D00DD9663 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F5572E2768C39D00DD9663 /* LikeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		C3AC8B7327555CF400991DA6 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		C3AC8B7627555D3C00991DA6 /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
 		C3BCAE6D275E99C40029D1EB /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		C3F5572E2768C39D00DD9663 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		E89A016E2038CED844460ECB /* Pods_iOS_Labs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Labs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				C354D1862758368200F73E0C /* ImageView.swift */,
+				C3F5572E2768C39D00DD9663 /* LikeButton.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				C3AC8B7427555CF400991DA6 /* UserDefaultsService.swift in Sources */,
 				C3AC8B6B2755444000991DA6 /* PhotoManager.swift in Sources */,
 				C32FA4A72764CEE800E81E39 /* LikedPhotos.swift in Sources */,
+				C3F5572F2768C39D00DD9663 /* LikeButton.swift in Sources */,
 				C300E4BB2753E79700E87EFE /* SignUpError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,8 +30,12 @@ struct LikedPhotosService {
         }
     }
     
+    func liked(photo: PhotoModel) -> Bool {
+        return dataService.keyInDictData(dictKey: photo.id, key: dataKey)
+    }
+    
     func getAll() -> [PhotoModel]? {
-        guard let allPhotos = dataService.dataByKey(key: dataKey) else {
+        guard let allPhotos = dataService.dictValuesByKey(key: dataKey) else {
             return nil
         }
         return getDecodedPhotos(photos: allPhotos)
@@ -40,26 +44,13 @@ struct LikedPhotosService {
     private func save(newPhoto: PhotoModel) {
         do {
             let newPhotoData = try encoder.encode(newPhoto)
-            dataService.addData(data: newPhotoData, key: dataKey)
+            dataService.addDictData(dictKey: newPhoto.id, dictValue: newPhotoData, key: dataKey)
         } catch {
         }
     }
     
     private func remove(photoToRemove: PhotoModel) {
-        do {
-            let photoToRemoveData = try encoder.encode(photoToRemove)
-            dataService.removeData(data: photoToRemoveData, key: dataKey)
-        } catch {
-        }
-    }
-    
-    private func liked(photo: PhotoModel) -> Bool {
-        do {
-            let photoToCheck = try encoder.encode(photo)
-            return dataService.saved(data: photoToCheck, key: dataKey)
-        } catch {
-            return false
-        }
+        dataService.removeDictDataByKey(dictKey: photoToRemove.id, key: dataKey)
     }
 
     private func getDecodedPhotos(photos: [Data]) -> [PhotoModel] {

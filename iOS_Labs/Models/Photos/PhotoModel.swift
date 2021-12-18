@@ -12,11 +12,12 @@ class PhotoModel: Decodable, Encodable, Identifiable {
     var id: String
     var description: String? = ""
     var sourceUrls: [String: String]
+    var isLiked: Bool = false
     
     func regularImageUrl() -> String? {
         return self.sourceUrls[Constants.regularImgKey]
     }
-    
+        
     func fullImageUrl() -> String? {
         return self.sourceUrls[Constants.fullImgKey]
     }
