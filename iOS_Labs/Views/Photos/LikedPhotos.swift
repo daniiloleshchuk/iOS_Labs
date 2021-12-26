@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct LikedPhotos: View {
-    @State var likedPhotos = LikedPhotosService.shared.getAll()
+    @ObservedObject var viewModel = PhotosViewModel()
     
     var body: some View {
-        if #available(iOS 15.0, *) {
-            List (likedPhotos ?? []) { photo in
-                ImageView(photoModel: photo)
+        Group {
+            if #available(iOS 15.0, *) {
+                List (viewModel.likedPhotos) { photo in
+                    ImageView(photoModel: photo)
+                }
+                .navigationTitle(Constants.navTitle)
+                .refreshable {
+                    viewModel.loadLikedPhotos()
+                }
             }
-            .navigationTitle(Constants.navTitle)
-            .refreshable {
-                    likedPhotos = LikedPhotosService.shared.getAll()
-            }
-        }
+        }.onAppear(perform: {
+            viewModel.loadLikedPhotos()
+        })
     }
     
     enum Constants {

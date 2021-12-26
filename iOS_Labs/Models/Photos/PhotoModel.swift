@@ -8,7 +8,7 @@
 import Foundation
 
 
-class PhotoModel: Decodable, Encodable, Identifiable {
+class PhotoModel: Decodable, Encodable, Identifiable, ObservableObject {
     var id: String
     var description: String? = ""
     var sourceUrls: [String: String]

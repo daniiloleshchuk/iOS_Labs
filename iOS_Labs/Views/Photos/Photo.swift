@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Photo: View {
-    @State var photoModel: PhotoModel
+    @ObservedObject var photoModel: PhotoModel
     var imageModel: ImageModel
     
     init(photoModel: PhotoModel) {

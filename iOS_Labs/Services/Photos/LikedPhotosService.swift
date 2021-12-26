@@ -19,8 +19,6 @@ struct LikedPhotosService {
         encoder = JSONEncoder()
         dataService = .shared
     }
-
-    let dataKey = "likedPhotos"
     
     func like(photo: PhotoModel) {
         if liked(photo: photo) {
@@ -31,11 +29,11 @@ struct LikedPhotosService {
     }
     
     func liked(photo: PhotoModel) -> Bool {
-        return dataService.keyInDictData(dictKey: photo.id, key: dataKey)
+        return dataService.keyInDictData(dictKey: photo.id, key: Constants.dataKey)
     }
     
     func getAll() -> [PhotoModel]? {
-        guard let allPhotos = dataService.dictValuesByKey(key: dataKey) else {
+        guard let allPhotos = dataService.dictValuesByKey(key: Constants.dataKey) else {
             return nil
         }
         return getDecodedPhotos(photos: allPhotos)
@@ -44,13 +42,13 @@ struct LikedPhotosService {
     private func save(newPhoto: PhotoModel) {
         do {
             let newPhotoData = try encoder.encode(newPhoto)
-            dataService.addDictData(dictKey: newPhoto.id, dictValue: newPhotoData, key: dataKey)
+            dataService.addDictData(dictKey: newPhoto.id, dictValue: newPhotoData, key: Constants.dataKey)
         } catch {
         }
     }
     
     private func remove(photoToRemove: PhotoModel) {
-        dataService.removeDictDataByKey(dictKey: photoToRemove.id, key: dataKey)
+        dataService.removeDictDataByKey(dictKey: photoToRemove.id, key: Constants.dataKey)
     }
 
     private func getDecodedPhotos(photos: [Data]) -> [PhotoModel] {
@@ -61,5 +59,9 @@ struct LikedPhotosService {
         } catch {
             return []
         }
+    }
+    
+    enum Constants {
+        static let dataKey = "likedPhotos"
     }
 }
