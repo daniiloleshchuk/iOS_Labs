@@ -23,7 +23,7 @@ struct UserService {
     let dataKey = "users"
     
     func getAll() -> [User]? {
-        guard let allUsers = dataService.dataByKey(key: dataKey) else {
+        guard let allUsers = dataService.arrayDataByKey(key: dataKey) else {
             return nil
         }
         return getDecodedUsers(from: allUsers)
@@ -32,7 +32,7 @@ struct UserService {
     func save(newUser: User) {
         do {
             let newUserData = try encoder.encode(newUser)
-            dataService.addData(data: newUserData, key: dataKey)
+            dataService.addArrayData(data: newUserData, key: dataKey)
         } catch {
         }
     }

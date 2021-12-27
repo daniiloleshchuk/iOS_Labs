@@ -8,13 +8,18 @@
 import Foundation
 
 
-struct PhotoModel: Decodable, Identifiable {
+class PhotoModel: Decodable, Encodable, Identifiable, ObservableObject {
     var id: String
     var description: String? = ""
     var sourceUrls: [String: String]
+    var isLiked: Bool = false
     
     func regularImageUrl() -> String? {
         return self.sourceUrls[Constants.regularImgKey]
+    }
+        
+    func fullImageUrl() -> String? {
+        return self.sourceUrls[Constants.fullImgKey]
     }
     
     enum CodingKeys: String, CodingKey {
@@ -26,5 +31,6 @@ struct PhotoModel: Decodable, Identifiable {
     enum Constants {
         static let usernameKey = "username"
         static let regularImgKey = "regular"
+        static let fullImgKey = "full"
     }
  }

@@ -9,24 +9,23 @@ import SwiftUI
 
 
 struct ImageView: View {
-     @ObservedObject var imageModel: ImageModel
+    @ObservedObject var imageModel: ImageModel
+    var photoModel: PhotoModel
 
-     init(imageUrl: String) {
-         self.imageModel = ImageModel(imageURL: imageUrl)
-     }
+    init(photoModel: PhotoModel) {
+        self.photoModel = photoModel
+        self.imageModel = ImageModel(imageURL: photoModel.regularImageUrl()!)
+    }
 
-     var body: some View {
-        Image(uiImage: imageModel.image)
-        .resizable()
-        .aspectRatio(contentMode: .fit)
-//        .listRowInsets(EdgeInsets())
-     }
- }
-
-
-struct Img_Previews: PreviewProvider {
-    static var previews: some View {
-        let imageUrl = "https://images.unsplash.com/photo-1633113215937-18127a49a8a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzkxNTB8MXwxfGFsbHwxfHx8fHx8Mnx8MTYzODQ3NTUwMw&ixlib=rb-1.2.1&q=80&w=1080"
-        ImageView(imageUrl: imageUrl)
+    var body: some View {
+        ZStack {
+            Image(uiImage: imageModel.image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            NavigationLink(destination: Photo(photoModel: photoModel)) {
+                EmptyView()
+            }
+        }
+        .listRowInsets(EdgeInsets())
     }
 }

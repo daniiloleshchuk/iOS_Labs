@@ -11,15 +11,22 @@ struct Photos: View {
     @ObservedObject var viewModel = PhotosViewModel()
     
     var body: some View {
-        Group {
+        VStack {
+            NavigationLink(destination: LikedPhotos()) {
+                Text(Constants.favouritesPlaceholder)
+            }
             if viewModel.photos.isEmpty {
                 Text(Constants.noPhotosPlaceholder)
             } else {
-                List (viewModel.photos) { photo in
-                    ImageView(imageUrl: photo.regularImageUrl()!)
+                if #available(iOS 15.0, *) {
+                    List (viewModel.photos) { photo in
+                        ImageView(photoModel: photo)
+                    }
+                    .listStyle(PlainListStyle())
+                    .refreshable {
+                        viewModel.loadPhotos()
+                    }
                 }
-                .listStyle(PlainListStyle())
-
             }
         }
         .navigationBarTitle(Constants.navBarTitle, displayMode: .inline)
@@ -28,11 +35,11 @@ struct Photos: View {
         })
 
     }
-
     
     enum Constants {
         static let noPhotosPlaceholder = "No photos"
         static let navBarTitle = "Photos"
+        static let favouritesPlaceholder = "Favourites"
     }
  }
 
